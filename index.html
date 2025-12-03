@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dima Home Store</title>
+
+    <!-- Updated SMARTLOOK TRACKING -->
+    <script type="text/javascript">
+        window.smartlook||(function(d){
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;
+        c.type='text/javascript';c.charset='utf-8';
+        c.src='https://web-sdk.smartlook.com/recorder.js';
+        h.appendChild(c);
+        })(document);
+        smartlook('init', '2e27977acb3c323180d40bd779cc8908f7f9f550', { region: 'eu' });
+    </script>
+
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fafafa; }
+        .navbar { background: #2d2d2d; color: white; padding: 15px 30px; display: flex; justify-content: space-between; }
+        .logo { font-size: 24px; font-weight: bold; }
+        .cart { cursor: pointer; }
+        .header { text-align: center; padding: 30px; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; padding: 20px 40px; }
+        .product-card { background: white; border-radius: 12px; padding: 15px; box-shadow: 0 2px 10px #ddd; text-align: center; transition: .2s; }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-img { background: #eee; height: 160px; border-radius: 10px; margin-bottom: 10px; }
+        button { background: #ff6f00; color: white; padding: 10px 18px; border: none; border-radius: 8px; cursor: pointer; }
+        .about, .contact { padding: 40px; text-align: center; background: white; margin-top: 30px; box-shadow: 0 0 10px #ddd; }
+        input, textarea { width: 300px; padding: 12px; margin-top: 10px; border-radius: 8px; border: 1px solid #bbb; }
+        .footer { background: #2d2d2d; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+    </style>
+
+    <script>
+        let cartCount = 0;
+        function addToCart(productName) {
+            cartCount++;
+            document.getElementById("cartCounter").innerText = cartCount;
+            alert(productName + " added to cart!");
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">🛒 Dima Home Store</div>
+        <div class="cart">Cart: <span id="cartCounter">0</span></div>
+    </div>
+
+    <div class="header">
+        <h1>Home & Kitchen Essentials</h1>
+        <p>High-quality tools to make your home better</p>
+    </div>
+
+    <div class="products">
+
+        <div class="product-card"><div class="product-img"></div><h3>Glass Storage Jars</h3><p>$12.99</p><button onclick="addToCart('Glass Storage Jars')">Add to Cart</button></div>
+        <div class="product-card"><div class="product-img"></div><h3>Stainless Steel Knife Set</h3><p>$24.99</p><button onclick="addToCart('Knife Set')">Add to Cart</button></div>
+        <div class="product-card"><div class="product-img"></div><h3>Silicone Cooking Tools</h3><p>$18.50</p><button onclick="addToCart('Silicone Tools')">Add to Cart</button></div>
+        <div class="product-card"><div class="product-img"></div><h3>Wooden Cutting Board</h3><p>$14.00</p><button onclick="addToCart('Cutting Board')">Add to Cart</button></div>
+        <div class="product-card"><div class="product-img"></div><h3>Ceramic Dinner Plates</h3><p>$29.99</p><button onclick="addToCart('Dinner Plates')">Add to Cart</button></div>
+        <div class="product-card"><div class="product-img"></div><h3>Electric Hand Mixer</h3><p>$34.99</p><button onclick="addToCart('Hand Mixer')">Add to Cart</button></div>
+
+    </div>
+
+    <div class="about">
+        <h2>About Our Store</h2>
+        <p>We provide premium quality home and kitchen tools that improve your daily life.</p>
+    </div>
+
+    <div class="contact">
+        <h2>Contact Us</h2>
+        <input type="text" placeholder="Your Name"><br>
+        <input type="email" placeholder="Your Email"><br>
+        <textarea rows="4" placeholder="Your Message"></textarea><br>
+        <button>Send Message</button>
+    </div>
+
+    <div class="footer">© 2025 Dima Home • All rights reserved.</div>
+
+</body>
+</html>
